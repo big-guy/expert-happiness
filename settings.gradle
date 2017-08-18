@@ -1,0 +1,15 @@
+
+// Define available source builds
+scmBuilds {
+    groovy(GitScmBuild) {
+        url = "https://github.com/apache/groovy.git"
+        // Can specify mappings between Maven coordinates and projects in the source build
+        dependencySubstitution {
+            substitute module("org.codehaus.groovy:groovy-all") with project(":")
+        }
+    }
+
+    spock(GitScmBuild) {
+        url = "https://github.com/spockframework/spock.git"
+    }
+}

@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'Main'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile ('org.spockframework:spock-core:1.1-groovy-2.4')
+}
